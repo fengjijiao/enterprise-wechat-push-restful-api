@@ -22,8 +22,8 @@ jobs:
            go-version: '1.15.5' # The Go version to download (if necessary) and use.
       - run: chmod +x compiler.sh && ./compiler.sh
       - name: Upload release binaries
-        uses: alexellis/upload-assets@0.2.2
+        uses: alexellis/upload-assets@0.2.3
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          asset_paths: '["./bin/e-wpra*"]'
+          asset_paths: '["./bin/*"]'
