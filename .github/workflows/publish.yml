@@ -26,13 +26,14 @@ jobs:
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
       - name: Get Name of Artifact
+        env: 
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         run: |
           ARTIFACT_PATHNAME=$(ls bin/* | head -n 1)
           ARTIFACT_NAME=$(basename $ARTIFACT_PATHNAME)
