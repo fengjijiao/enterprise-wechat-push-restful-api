@@ -6,13 +6,13 @@ on:
     paths-ignore: 
       - LICENSE
       - README.md
-      - publish.yml
+      - .github
   pull_request:
     branches: [ main ]
     paths-ignore: 
       - LICENSE
       - README.md
-      - publish.yml
+      - .github
 
 jobs:
   build:
