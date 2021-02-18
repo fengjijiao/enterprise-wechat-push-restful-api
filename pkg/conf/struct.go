@@ -14,6 +14,7 @@ type ConfInfo struct {
 	BaseUrlPath string `yaml:"base-url-path"`
 	SecurityPrefix string `yaml:"security-prefix"`
 	WechatToken string `yaml:"token"`
+	WechatEnCodingAesKey string	`yaml:"encoding-aeskey"`
 }
 
 func (ci *ConfInfo) setDefaults() {
@@ -31,5 +32,8 @@ func (ci *ConfInfo) setDefaults() {
 	}
 	if ci.WechatToken == "" {
 		logio.Logger.Fatal("[setDefaults]: WechatToken can not be empty!")
+	}
+	if ci.WechatEnCodingAesKey == "" {
+		logio.Logger.Fatal("[setDefaults]: WechatEnCodingAesKey can not be empty!")
 	}
 }

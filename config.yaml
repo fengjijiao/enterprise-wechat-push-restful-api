@@ -6,3 +6,4 @@ http-server-listen: "127.0.0.1:8090"
 base-url-path: /api/enterprise-wechat
 security-prefix: Wky9i86lKRJ5mhzIt4v1n2mKq2SQiL8
 token: 21LcJJVRkGJtufk12FEQQoHDtQA9hrjG
+encoding-aeskey: jWmYm7qr5nMoAUwZRjGtBxmz3KA1tkAj3ykkR6q2B2C
