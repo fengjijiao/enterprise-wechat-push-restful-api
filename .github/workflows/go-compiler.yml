@@ -6,13 +6,13 @@ on:
     paths-ignore: 
       - LICENSE
       - README.md
-      - .github
+      - .github/workflows/*.yml
   pull_request:
     branches: [ main ]
     paths-ignore: 
       - LICENSE
       - README.md
-      - .github
+      - .github/workflows/*.yml
 
 jobs:
   build:
